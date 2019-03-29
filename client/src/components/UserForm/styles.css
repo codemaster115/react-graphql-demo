@@ -1,0 +1,11 @@
+.foo {
+  display: none;
+  opacity: 0;
+  animation: fade-out 1s 1;
+}
+
+.foo.fade-in {
+  display: block;
+  opacity: 1;
+  animation: fade-in 0.5s 1;
+}
