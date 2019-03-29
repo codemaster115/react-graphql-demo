@@ -6,16 +6,21 @@ Implement Create, Search, Edit, Delete operations for a list.
 
 Live Demo: https://afternoon-river-49863.herokuapp.com/
 
-## Frontend(3hrs)
+## Frontend (4hrs)
 
 - React.js
 - Typescript
 - antd
 - react-apollo, graphql, apollo-boost
 
-## Backend(3hrs)
+## Backend (3hrs)
+
 - express
 - apollo-server-express
+
+## Deployment (0.5hr)
+
+It's deployed on Heroku by using heroku cli.
 
 ## Documentation
 
