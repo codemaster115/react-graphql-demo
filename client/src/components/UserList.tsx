@@ -86,6 +86,8 @@ class UserList extends React.Component<OwnProps & DataProps<Response>> {
   }
 }
 
+export { UserTable };
+
 export default withQuery<OwnProps, Response, {}, DataProps<Response>>(
   GET_USERS
 )(UserList);

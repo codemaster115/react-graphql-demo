@@ -15,11 +15,17 @@ const Step1 = ({ form, user }: IProps) => {
   const { getFieldDecorator } = form;
   return (
     <BankQuery query={GET_BANKS}>
-      {({ data }) => {
+      {({ data, loading, error }) => {
+        if (loading || error) {
+          return null;
+        }
         const { banks } = data || { banks: [] };
         return (
           <BranchQuery query={GET_BRANCHES}>
-            {({ data }) => {
+            {({ data, loading, error }) => {
+              if (loading || error) {
+                return null;
+              }
               const { branches } = data || { branches: [] };
               return (
                 <React.Fragment>

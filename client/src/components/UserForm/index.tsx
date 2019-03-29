@@ -25,7 +25,7 @@ interface IState {
   curStep: number;
 }
 
-class UserForm extends React.Component<IProps, IState> {
+class UserFormComponent extends React.Component<IProps, IState> {
   state: IState = {
     curStep: 0
   };
@@ -101,4 +101,8 @@ class UserForm extends React.Component<IProps, IState> {
   }
 }
 
-export default Form.create({ name: "form_user" })(UserForm);
+const UserForm = Form.create({ name: "form_user" })(UserFormComponent);
+
+export { UserForm };
+
+export default UserForm;
