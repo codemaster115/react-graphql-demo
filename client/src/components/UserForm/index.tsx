@@ -74,17 +74,6 @@ class UserFormComponent extends React.Component<IProps, IState> {
               {step.content}
             </div>
           ))}
-          {/* {curStep === 3 && (
-            <React.Fragment>
-              <span>{user && user.accountHolderName}</span>
-              <span>{user && user.accountNumber}</span>
-              <span>{user && user.accountType}</span>
-              <span>{user && user.employeeName}</span>
-              <span>{user && user.employeeNumber}</span>
-              <span>{user && user.bank}</span>
-              <span>{user && user.branch}</span>
-            </React.Fragment>
-          )} */}
           <div className="steps-action">
             {curStep < steps.length - 1 && (
               <Button onClick={() => this.next()}>Next</Button>
