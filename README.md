@@ -2,8 +2,6 @@
 
 ## About this repository
 
-# Employee bank account list management.
-
 Implement Create, Search, Edit, Delete operations for a list.
 
 Live Demo: https://afternoon-river-49863.herokuapp.com/
