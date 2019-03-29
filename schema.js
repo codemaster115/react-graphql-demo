@@ -20,8 +20,8 @@ const typeDefs = gql`
     bank: Bank
     branch: Branch
     accountType: String
-    accountNumber: Int
-    employeeNumber: Int
+    accountNumber: String
+    employeeNumber: String
     lastUpdated: DateTime
   }
 
@@ -31,8 +31,8 @@ const typeDefs = gql`
     bank: ID
     branch: ID
     accountType: String
-    accountNumber: Int
-    employeeNumber: Int
+    accountNumber: String
+    employeeNumber: String
   }
 
   type Query {
