@@ -18,6 +18,7 @@ export type BankUser = {
   accountNumber: string;
   employeeNumber: string;
   lastUpdated: Date;
+  [key: string]: any;
 };
 
 export type BankUserInput = {

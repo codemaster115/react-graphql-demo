@@ -1,6 +1,7 @@
 import * as React from "react";
-import { withApollo, WithApolloClient, Mutation } from "react-apollo";
+import { withApollo, WithApolloClient } from "react-apollo";
 import { Button } from "antd";
+import { FormComponentProps } from "antd/lib/form";
 import UserList from "../components/UserList";
 import {
   UPDATE_USER,
@@ -10,7 +11,6 @@ import {
 } from "../config/queries";
 import UserForm from "../components/UserForm";
 import { BankUser, BankUserInput } from "../config/types";
-import { FormComponentProps } from "antd/lib/form";
 
 interface IProps {}
 interface IState {

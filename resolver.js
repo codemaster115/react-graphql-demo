@@ -3,11 +3,35 @@ const uuidv1 = require("uuid/v1");
 const users = [
   {
     id: uuidv1(),
-    accountHolderName: "J.K. Rowling"
+    accountHolderName: "J.K. Rowling",
+    accountType: "Savings",
+    accountNumber: "0000042",
+    employeeName: "Dr. Gregory House",
+    employeeNumber: "012345678901234",
+    bank: {
+      id: 1,
+      name: "Citibank"
+    },
+    branch: {
+      id: 1,
+      name: "LA Central"
+    }
   },
   {
     id: uuidv1(),
-    accountHolderName: "Michael Crichton"
+    accountHolderName: "Michael Crichton",
+    accountType: "Checking",
+    accountNumber: "0001153",
+    employeeName: "Mr. Robot",
+    employeeNumber: "012345678901234",
+    bank: {
+      id: 2,
+      name: "JP Morgan Chase"
+    },
+    branch: {
+      id: 2,
+      name: "Branch 42"
+    }
   }
 ];
 
