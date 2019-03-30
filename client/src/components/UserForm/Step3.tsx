@@ -19,7 +19,8 @@ const Step3 = ({ form, user }: IProps) => {
       </Form.Item>
       <Form.Item>
         {getFieldDecorator("employeeNumber", {
-          initialValue: user && user.employeeNumber
+          initialValue: user && user.employeeNumber,
+          rules: [{ max: 15 }]
         })(<Input placeholder={"Employee Number"} />)}
       </Form.Item>
     </React.Fragment>

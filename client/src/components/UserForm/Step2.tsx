@@ -24,7 +24,8 @@ const Step2 = ({ form, user }: IProps) => {
       </Form.Item>
       <Form.Item>
         {getFieldDecorator("accountNumber", {
-          initialValue: user && user.accountNumber
+          initialValue: user && user.accountNumber,
+          rules: [{ max: 7 }]
         })(<Input placeholder={"Account Number"} />)}
       </Form.Item>
     </React.Fragment>

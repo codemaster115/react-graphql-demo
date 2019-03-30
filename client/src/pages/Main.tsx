@@ -84,11 +84,23 @@ class Main extends React.Component<WithApolloClient<IProps>, IState> {
       form.validateFields((err, values) => {
         const { selectedUser } = this.state;
         const { client } = this.props;
-        console.log("Received values of form: ", values);
         if (err) {
           return;
         }
 
+        if (values.accountNumber) {
+          values.accountNumber = values.accountNumber.replace(
+            /\d+/g,
+            m => "0".repeat(7).substr(m.length) + m
+          );
+        }
+
+        if (values.employeeNumber) {
+          values.employeeNumber = values.employeeNumber.replace(
+            /\d+/g,
+            m => "0".repeat(15).substr(m.length) + m
+          );
+        }
         if (!selectedUser) {
           client
             .mutate({
