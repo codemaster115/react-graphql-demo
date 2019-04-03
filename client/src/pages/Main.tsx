@@ -19,7 +19,7 @@ interface IState {
   selectedUser?: BankUser;
 }
 
-class Main extends React.Component<WithApolloClient<IProps>, IState> {
+export class Main extends React.Component<WithApolloClient<IProps>, IState> {
   state: IState = {
     selectedRowKeys: [],
     visibleModal: false,

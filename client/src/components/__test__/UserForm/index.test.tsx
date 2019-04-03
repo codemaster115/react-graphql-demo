@@ -3,8 +3,10 @@ import { shallow, mount } from "enzyme";
 import { MockedProvider } from "react-apollo/test-utils";
 import wait from "waait";
 
-import { GET_USERS } from "../../config/queries";
-import UserList, { UserTable } from "../UserList";
+import { GET_USERS } from "../../../config/queries";
+import UserList, { UserTable } from "../../UserList";
+import UserForm from "../../UserForm";
+import Step1 from "../../UserForm/Step1";
 
 const mocks = [
   {
@@ -36,24 +38,30 @@ const mocks = [
   }
 ];
 
-describe("UserList", () => {
+describe("UserForm", () => {
   it("renders without error", () => {
     shallow(
-      <MockedProvider mocks={mocks} addTypename={false}>
-        <UserList onEdit={jest.fn} onSelectionChange={jest.fn} />
-      </MockedProvider>
+      <UserForm
+        visible={true}
+        onOk={jest.fn}
+        onCancel={jest.fn}
+        handleSubmit={jest.fn}
+      />
     );
   });
 
-  it("should render correctly", async () => {
+  it("should render correctly", () => {
     const wrapper = mount(
       <MockedProvider mocks={mocks} addTypename={false}>
-        <UserList onEdit={jest.fn} onSelectionChange={jest.fn} />
+        <UserForm
+          visible={true}
+          onOk={jest.fn}
+          onCancel={jest.fn}
+          handleSubmit={jest.fn}
+        />
       </MockedProvider>
     );
 
-    await wait(0); // wait for response
-    wrapper.update();
-    expect(wrapper.find(UserTable)).toHaveLength(1);
+    expect(wrapper.find(Step1)).toHaveLength(1);
   });
 });
